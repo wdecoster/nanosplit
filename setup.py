@@ -8,7 +8,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='NanoSplit',
-    version='0.1.0',
+    version='0.1.2',
     description='Perform splitting of Oxford Nanopore sequencing data in a fail and pass dataset.',
     long_description='Perform splitting of Oxford Nanopore sequencing data in a fail and pass dataset using a user defined quality cutoff. The script can read compressed input and will write to gzip compressed files.',
     url='https://github.com/wdecoster/nanosplit',
@@ -27,7 +27,7 @@ setup(
     ],
     keywords='nanopore sequencing processing trimming filtering',
     packages=find_packages(),
-    install_requires=['biopython', 'nanomath', 'nanoget', 'gzip'],
+    install_requires=['biopython', 'nanomath', 'nanoget'],
     package_data={'nanosplit': []},
         package_dir={'nanosplit': 'nanosplit'},
         include_package_data=True,
