@@ -1,7 +1,9 @@
 #wdecoster
 '''
 Example usage:
-NanoSplit.py -q 10 reads.fastq.gz
+NanoSplit reads.fastq.gz
+NanoSplit -q 6 reads.fastq.gz
+NanoSplit -q 10 --outdir /home/user/datasetsplit/ reads.fastq
 '''
 
 from Bio import SeqIO
@@ -10,6 +12,7 @@ import gzip
 import os
 from nanomath import aveQual
 from nanoget import handlecompressedFastq
+
 __version__= "0.1.0"
 
 
