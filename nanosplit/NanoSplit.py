@@ -4,10 +4,8 @@ Example usage:
 NanoSplit.py -q 10 reads.fastq.gz
 '''
 
-from __future__ import print_function
 from Bio import SeqIO
 import argparse
-import sys
 import gzip
 import os
 from nanomath import aveQual
