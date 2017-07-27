@@ -3,14 +3,17 @@ from setuptools import setup, find_packages
 # To use a consistent encoding
 from codecs import open
 from os import path
+import pypandoc
+
 
 here = path.abspath(path.dirname(__file__))
+exec(open('nanosplit/version.py').read())
 
 setup(
     name='NanoSplit',
-    version='0.1.2',
+    version=__version__,
     description='Perform splitting of Oxford Nanopore sequencing data in a fail and pass dataset.',
-    long_description='Perform splitting of Oxford Nanopore sequencing data in a fail and pass dataset using a user defined quality cutoff. The script can read compressed input and will write to gzip compressed files.',
+    long_description=pypandoc.convert(path.join(here, 'README.md'), 'rst'),
     url='https://github.com/wdecoster/nanosplit',
     author='Wouter De Coster',
     author_email='decosterwouter@gmail.com',
