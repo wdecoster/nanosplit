@@ -13,7 +13,7 @@ setup(
     name='NanoSplit',
     version=__version__,
     description='Perform splitting of Oxford Nanopore sequencing data in a fail and pass dataset.',
-    long_description=pypandoc.convert(path.join(here, 'README.md'), 'rst'),
+    long_description=open(path.join(here, "README.rst")).read(),
     url='https://github.com/wdecoster/nanosplit',
     author='Wouter De Coster',
     author_email='decosterwouter@gmail.com',
