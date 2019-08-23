@@ -10,7 +10,7 @@ from Bio import SeqIO
 import argparse
 import gzip
 import os
-from nanomath import aveQual
+from nanomath import ave_qual
 from nanoget import handlecompressedFastq
 
 __version__= "0.1.2"
@@ -39,7 +39,7 @@ def splitFq(fq, args):
     p, f = 0, 0
     with gzip.open(prefix + ".pass.fastq.gz", 'wt') as passed, gzip.open(prefix + ".fail.fastq.gz", 'wt') as failed:
         for record in SeqIO.parse(fq, "fastq"):
-            if aveQual(record.letter_annotations["phred_quality"]) >= args.quality:
+            if ave_qual(record.letter_annotations["phred_quality"]) >= args.quality:
                 p+=1
                 passed.write(record.format("fastq"))
             else:
