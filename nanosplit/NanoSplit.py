@@ -18,7 +18,7 @@ __version__= "0.1.2"
 
 def main():
     args = getArgs()
-    fqin = handlecompressedFastq(args.fastqfile.name)
+    fqin = handle_compressed_input(args.fastqfile.name)
     splitFq(fqin, args)
 
 
