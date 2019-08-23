@@ -11,7 +11,7 @@ import argparse
 import gzip
 import os
 from nanomath import ave_qual
-from nanoget import handle_compressed_input
+import nanoget
 
 __version__= "0.1.2"
 
