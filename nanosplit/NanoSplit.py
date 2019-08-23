@@ -11,14 +11,14 @@ import argparse
 import gzip
 import os
 from nanomath import ave_qual
-import nanoget
+from nanoget import get_input
 
 __version__= "0.1.2"
 
 
 def main():
     args = getArgs()
-    fqin = handle_compressed_input(args.fastqfile.name)
+    fqin = get_input(args.fastqfile.name)
     splitFq(fqin, args)
 
 
